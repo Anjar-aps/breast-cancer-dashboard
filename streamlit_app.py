@@ -92,7 +92,7 @@ metric_choice = st.selectbox("Pilih metrik evaluasi", METRICS, index=0)
 chart_df = pd.DataFrame(
     {"Algoritma": list(RESULTS.keys()), metric_choice: [RESULTS[name][metric_choice] for name in RESULTS]}
 ).set_index("Algoritma")
-st.bar_chart(chart_df, y=metric_choice, y_min=0, y_max=1)
+st.bar_chart(df, y=metric_choice)
 
 results_df = pd.DataFrame.from_dict(RESULTS, orient="index")
 results_df.index.name = "Algoritma"
