@@ -213,11 +213,11 @@ with algo_cols[2]:
 st.markdown('<div class="soft-card"><b>Kesimpulan komparatif</b><br>Logistic Regression dan Random Forest sama-sama memperoleh Average Score 0,9448. Logistic Regression unggul pada Precision dan ROC-AUC, sedangkan Random Forest unggul pada Recall dan F1-Score. Tidak ada satu algoritma yang unggul pada seluruh metrik; pemilihan model perlu mengikuti tujuan penggunaan.</div>', unsafe_allow_html=True)
 
 with st.expander("Mengenal algoritma yang dibandingkan"):
-    st.markdown(
-        "- **Logistic Regression:** memperkirakan probabilitas kelas berdasarkan kombinasi fitur; fitur distandardisasi pada eksperimen ini.\\n"
-        "- **Decision Tree:** membentuk aturan keputusan dalam struktur percabangan.\\n"
-        "- **Random Forest:** menggabungkan prediksi dari banyak pohon keputusan."
-    )
+    st.markdown("""
+    - **Logistic Regression:** memperkirakan probabilitas kelas berdasarkan kombinasi fitur; fitur distandardisasi pada eksperimen ini.
+    - **Decision Tree:** membentuk aturan keputusan dalam struktur percabangan.
+    - **Random Forest:** menggabungkan prediksi dari banyak pohon keputusan.
+    """)
 
 st.markdown('<div class="section-kicker">04 / Experimental protocol</div>', unsafe_allow_html=True)
 st.header("Metodologi eksperimen")
