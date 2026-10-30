@@ -144,7 +144,7 @@ st.markdown("""
 </nav>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="soft-card"><b>Catatan eksperimen</b><br>Angka evaluasi ditampilkan sesuai hasil notebook revisi. Formulir prediksi menggunakan artefak Random Forest dari file joblib. Dashboard ini merupakan media pembelajaran, bukan alat diagnosis medis.</div>', unsafe_allow_html=True)
+st.markdown('<div class="soft-card"><b>Catatan eksperimen</b><br>Angka evaluasi ditampilkan sesuai hasil notebook google colab. Formulir prediksi menggunakan artefak Random Forest. Dashboard ini merupakan media pembelajaran, bukan alat diagnosis medis.</div>', unsafe_allow_html=True)
 
 st.markdown('<div class="section-kicker">01 / Model performance</div>', unsafe_allow_html=True)
 st.header("Ringkasan hasil evaluasi")
