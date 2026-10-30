@@ -1,16 +1,41 @@
-# Breast Cancer Prediction System
+# Breast Cancer Prediction System — Streamlit
 
-## Menjalankan lokal
-Gunakan Python 3.11. Jalankan `pip install -r requirements.txt`, lalu `python app.py`. Buka `http://127.0.0.1:5000`.
+Aplikasi Streamlit untuk menampilkan perbandingan Logistic Regression, Decision Tree, dan Random Forest serta menjalankan prediksi menggunakan model Random Forest tersimpan.
 
-## Deploy online
-Unggah isi folder ini ke repository GitHub. Di Render pilih **New > Blueprint**, hubungkan repository, dan Render akan membaca `render.yaml`. Setelah deployment selesai, buka URL publik yang diberikan Render.
+## Struktur file di GitHub
 
-GitHub Pages tidak dapat menjalankan backend Flask. Aplikasi prediksi membutuhkan hosting Python.
+```text
+breast-cancer-dashboard/
+├── streamlit_app.py
+├── breast_cancer_rf_model.joblib
+├── requirements.txt
+└── README.md
+```
 
-## Endpoint
-- `GET /health`: status aplikasi dan model.
-- `POST /api/predict`: prediksi sembilan fitur dan probabilitas kelas Malignant.
+File `breast_cancer_rf_model.joblib` yang sudah ada di repository harus tetap dipertahankan dan berada di folder utama yang sama dengan `streamlit_app.py`.
 
-## Catatan
-File joblib harus berasal dari sumber tepercaya. Model ini untuk demonstrasi akademik, bukan diagnosis medis.
+## Menjalankan secara lokal
+
+Gunakan Python 3.11, lalu jalankan:
+
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+## Deploy ke Streamlit Community Cloud
+
+1. Push `streamlit_app.py`, `requirements.txt`, dan README ini ke repository GitHub.
+2. Buka https://share.streamlit.io/ dan pilih **Create app**.
+3. Pilih repository `Anjar-aps/breast-cancer-dashboard`.
+4. Pilih branch `main`.
+5. Isi **Main file path** dengan `streamlit_app.py`.
+6. Pilih versi Python 3.11 jika opsi pemilihan versi tersedia, lalu deploy.
+
+## Catatan model
+
+Model dilatih dengan scikit-learn 1.6.1. Karena itu `requirements.txt` mengunci versi tersebut agar sesuai dengan lingkungan pelatihan. Jika versi Python/dependensi di hosting berubah, pengujian ulang diperlukan.
+
+## Catatan penggunaan
+
+Angka metrik merupakan hasil eksperimen notebook revisi. Prediksi adalah demonstrasi pembelajaran mesin, bukan diagnosis medis atau pengganti pemeriksaan tenaga kesehatan.
